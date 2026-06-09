@@ -1,14 +1,13 @@
 pluginManagement {
     repositories {
-        maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
+        maven { url "https://maven.fabricmc.net/" }
+        maven { url "https://maven.minecraftforge.net/" }
+        mavenCentral()
         gradlePluginPortal()
     }
 }
-rootProject.name = 'just-a-potion-hud-maintained'
-include 'fabric-1.21-1.21.1'
-include 'fabric-1.21.2-1.21.5'
-include 'fabric-1.21.6-1.21.8'
-include 'fabric-1.21.9-1.21.10'
-include 'fabric-1.21.11'
 
-include 'fabric-26.1-26.1.2'
+rootProject.name = "PingLess Attack Indicator"
+
+include 'fabric-1.21-1.21.1', 'fabric-1.21.2-1.21.5', 'fabric-1.21.6-1.21.8'
+include 'fabric-1.21.9-1.21.10', 'fabric-1.21.11', 'fabric-26.1-26.1.2'

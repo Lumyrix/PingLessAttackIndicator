@@ -1,0 +1,52 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '6.0.+'
+}
+
+version = '1.0.0-forge'
+group = 'dev.lumyrix.pinglessai'
+archivesBaseName = 'PingLessAttackIndicator-forge-1.20.1'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+}
+
+
+
+
+processResources {
+    // Expande variáveis no mods.toml
+    filesMatching('META-INF/mods.toml') {
+        expand project.properties
+    }
+    // Copia TUDO de resources para o JAR (inclui pack.mcmeta)
+    from(sourceSets.main.resources.srcDirs) {
+        include '**/*'
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "PingLess Attack Indicator",
+            "Specification-Vendor": "Lumyrix",
+            "Specification-Version": "1",
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.version,
+            "Implementation-Vendor": "Lumyrix"
+        ])
+    }
+}
