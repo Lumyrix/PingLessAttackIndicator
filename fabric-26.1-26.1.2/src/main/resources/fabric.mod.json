@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "justapotionhud",
+  "id": "pinglessai",
   "version": "${version}",
-  "name": "JustAPotionHud-MAINTAINED",
-  "description": "Clean potion HUD with icon, name and timer.",
+  "name": "PingLess Attack Indicator",
+  "description": "Client-side attack cooldown bar. No more jitter on item switch.",
   "authors": [
     "Lumyrix"
   ],
@@ -11,16 +11,15 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "dev.lumyrix.potionhud.JustAPotionHudClient"
+      "dev.lumyrix.pinglessai.PinglessAiClient"
     ]
   },
   "mixins": [
-    "justapotionhud.mixins.json"
+    "pinglessai.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.19.2",
-    "minecraft": ">=26.1 <26.2",
-    "fabric-api": "*",
-    "java": ">=25"
+    "fabricloader": ">=0.18.0",
+    "minecraft": ">=26.1.0 <26.2.0",
+    "fabric-api": "*"
   }
 }

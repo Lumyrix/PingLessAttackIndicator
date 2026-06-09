@@ -1,0 +1,5 @@
+{
+  "pinglessai.mode.client_side": "Mode: Client-Side",
+  "pinglessai.mode.smoothed":    "Mode: Smoothed",
+  "pinglessai.mode.vanilla":     "Mode: Vanilla"
+}

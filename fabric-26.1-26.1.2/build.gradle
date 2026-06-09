@@ -10,6 +10,12 @@ base {
     archivesName = project.archives_base_name + "-26.1-26.1.2"
 }
 
+sourceSets {
+    main {
+        java { srcDirs rootProject.file('common/src/main/java'), 'src/main/java' }
+    }
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
@@ -29,6 +35,7 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
     withSourcesJar()
+    sourcesJar { duplicatesStrategy = DuplicatesStrategy.EXCLUDE }
     toolchain {
         languageVersion = JavaLanguageVersion.of(25)
     }

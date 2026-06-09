@@ -1,27 +1,33 @@
+# ── Gradle ──────────────────────────────────────────────────────
 .gradle/
-
 build/
-**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
-run/
-runs/
-
-out/
-bin/
-
-*.class
-*.log
-*.lck
-*.tmp
+# ── IDE ─────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
 *.swp
 *.swo
+*~
 
-.idea/
-.vscode/
-*.iml
-
+# ── OS ──────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-hs_err_pid*
-replay_pid*
+# ── Java ────────────────────────────────────────────────────────
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ── Logs ────────────────────────────────────────────────────────
+*.log
+*.hprof
+
+# ── Misc ────────────────────────────────────────────────────────
+backup.zip
