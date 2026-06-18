@@ -1,0 +1,18 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/Lumyrix/PingLessAttackIndicator/issues"
+
+[[mods]]
+modId = "pinglessai"
+version = "${version}"
+displayName = "PingLess Attack Indicator"
+description = "Client-side attack cooldown fix. No more jitter on item switch."
+authors = "Lumyrix"
+
+[[dependencies.pinglessai]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[47,)"
+    ordering = "NONE"
+    side = "CLIENT"

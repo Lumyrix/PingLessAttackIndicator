@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pinglessai",
+  "version": "${version}",
+  "name": "PingLess Attack Indicator",
+  "description": "Client-side attack cooldown bar. No more jitter on item switch.",
+  "authors": [
+    "Lumyrix"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.lumyrix.pinglessai.PinglessAiClient"
+    ]
+  },
+  "mixins": [
+    "pinglessai.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": ">=1.21.9 <1.21.11",
+    "fabric-api": "*"
+  }
+}
